@@ -4,6 +4,7 @@
   - software architecture -> component.png
   - software design -> 1. AuthDomainDiagram.png
                        2. noti-domain-model.png
+                       
                        3. PaymentDomainModel.png
                        4. transactionDomainDiagram.png
   - quality attribute scenarios -> QAScenarios.txt
