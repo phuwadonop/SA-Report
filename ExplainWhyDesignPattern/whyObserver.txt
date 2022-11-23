@@ -1,0 +1,13 @@
+Email Nitifications Subsystem
+
+problem :
+
+เนื่องจากเวลาเราจะส่ง email จะมี template ในการส่งหลายแบบ เพื่อส่งเสริม solid principle เราจึงต้องสร้าง service class มาหลาย ๆ ตัว เพื่อทำหน้าที่
+ส่ง email ในแบบต่าง ๆ  ทำให้ตัวที่ทำหน้าเป็น controller ต้องไปมี dependency กับ class เหล่านั้น ทำให้จะต้องมี coupling สูง เพื่อลด coupling 
+เราจึงเลือก observer pattern  มาเพื่อแก้ปัญหานี้
+
+How it solve that problem : 
+
+แทนที่ controller จะมี dependency กับ service ทุกตัว จะเหลือแค่ตัว publisher ตัวเดียวแทน เมื่อมี event เข้ามา ก็ทำการ publish event นั้น 
+จากนั้นเมื่อ event นั้นเป็น type ที่ตรงกับ type ที่ service ใด ๆ ที่ทำการ subscribe อยู่ service นั้นก็จะนำข้อมูลใน event นั้นไปประมวลผลต่อไป
+นอกจากนั้นหากระบบเราต้องการที่จะเพิ่มประเภทของ email ที่จะส่งเราก็ยังสามารถที่จะเพิ่มได้ง่ายอีกด้วย 

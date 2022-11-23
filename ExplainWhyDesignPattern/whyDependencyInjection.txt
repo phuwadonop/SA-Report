@@ -1,0 +1,14 @@
+Authentication Subsystem -> Dependency Injection
+
+problem :
+
+ใน authentication service มี dependency กับ service อื่น ๆ ภายในระบบของตัวเองจำนวนมาก ถ้าหากเราไม่ใช้การ inject object 
+เข้ามาก็จะต้องทำการ new Object เรื่อย ๆ ต่อ ๆ กันซึ่งจะเกิดความสับสนขึ้นได้ขณะทำการพัฒนา และนอกจากนั้นยังทำการทดสอบระบบได้ยาก
+
+
+
+How it solve that problem : 
+
+การใช้ Dependency Injection (DI) จะอำนวยความสะดวกในการสร้าง Object เพราะว่าเราไม่จำเป็นต้อง new Object ขึ้นมาเองแต่ injector จะทำการ 
+Inject Object เข้ามาให้แทนซึ่งอำนวยความสะดวกต่อการพัฒนา การทดสอบ และนอกจากนั้นยังอำนวนความสะดวกเมื่อเราต้องการแก้ไข class แต่ละ class อีกด้วย
+

@@ -1,0 +1,75 @@
+1. integrability 
+
+	Sourece of stimulus : stakeholder 
+	Stimulus : need to add market component
+	Artifacts : system 
+	Environment : devolopment or deployment
+	Response : market component is integrated and deployed
+	Response Measure : 1 month, with 2 person-month of effort
+
+
+2. Modifiability
+
+	Sourece of stimulus : other developer team need to send new type of email notification
+	Stimulus : need to send new type of email notification
+	Artifacts : Email-Notification subsystem
+	Environment : development or deployment
+	Response : new type of email notification can send
+	Response Measure : 2 Hours, with 1 person of effort
+
+3. Availability
+
+	Sourece of stimulus : End user or system
+	Stimulus : Fault, payment transaction incompletely
+	Artifacts : payement subsystem
+	Environment : deployment
+	Response : rollback state to before payment transaction created
+	Response Measure : lessthan 1 sec to rollback
+
+4. Performance
+
+	Sourece of stimulus : client or payment subsystem
+	Stimulus : initiate 100 requests to send email notification for result of funds transfer 
+	Artifacts : email notification subsystem 
+	Environment : rumtime or deployment
+	Response : process all requests
+	Response Measure : all email receiver got email and has average latency < 3 seconds
+
+5. Usability 
+
+	Sourece of stimulus : client 
+	Stimulus : have to receive money 
+	Artifacts : GUI and payment system
+	Environment : forgot account number
+	Response : system can create QRcode to receive money
+	Response Measure : QRcode created lessthan 1 sec, and client can receive money
+
+6. Usability 
+
+	Sourece of stimulus : client 
+	Stimulus : need to pay for food or something but no cash
+	Artifacts : GUI and payment system
+	Environment : service owner forgot account number but has QR code to receive money
+	Response : client scan QR code 
+	Response Measure : client can pay for food completely
+
+7. Security 
+
+	Sourece of stimulus : bad guy or criminal
+	Stimulus : try to access another account that is not their account
+	Artifacts : data within system, autentication system and email notification system or entire system
+	Environment : runtime or deployment and under normal operations 
+	Response : email notification system send email to account owner about that action
+	Response Measure : email has sent lessthan 2 sec, and if that action don't act by account owner 
+					then they can contact to support in time
+
+8. Functional Suitability 
+
+	Sourece of stimulus : client 
+	Stimulus : need to transfer to other account
+	Artifacts : GUI or application
+	Environment : client filled data completely and correctly 
+	Response : deduct source balance and increase destination account or
+	Response Measure : payment transaction worked completely and correctly following filled data
+
+
