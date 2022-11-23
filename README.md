@@ -1,6 +1,7 @@
 # SA-Report
 
 พวก diagram ต่าง ๆ จะอยู่ใน SA-Diagram
+  - proposal -> Proposal.pdf
   - software architecture -> component.png
   - software design : 
       1. AuthDomainDiagram.png
