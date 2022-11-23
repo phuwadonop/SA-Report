@@ -1,0 +1,10 @@
+Payment System
+
+Problem:
+    เนื่องจากใน payment service นั้นเป็น service ที่ประกอบไปด้วยหลาย entity ที่มีการเรียกใช้ transaction service 
+    และ notification service ซึ่งในทั้ง 2 services มี API ทีอยู่ในแต่ละ service ที่ทำงานประเภทเดียวกัน แต่ยังมีการเรียกใช้ที่ไม่ค่อยเป็นระเบียบสักเท่าไหร่
+
+How it solve that problem : 
+    แทนที่เราจะทำการประกาศ object เพื่อใช้งาน service แต่ละตัวแยกกันไปเลย แต่มีการนำ design pattern ที่ชื่อว่า method factory 
+    เข้ามาช่วยในการจัดระเบียบการประกาศ object โดยไม่เจาะจงคลาสโดยตรง แต่ใช้การเช็คด้วยประเภทของ entity และ return object 
+    ของคลาสที่ตรงกับประเภทของ entity แทน
